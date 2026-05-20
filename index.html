@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="container">
+
+    <h1>Network Info Dashboard</h1>
+    <div id="systemBanner" class="system-banner stable-banner">
+      <div id="alertBox" class="alert-box">
+
+    <span id="alertText">
+    Monitoring network activity...
+    </span>
+
+    </div>
+    <span id="bannerText">
+    SYSTEM STATUS: STABLE
+    </span>
+
+    </div>
+
+    <!-- DASHBOARD CARD -->
+    <section class="dashboard">
+
+      <div class="card">
+        
+        
+
+        <div class="hero-panel">
+        <div class="hero-box">
+        <span class="hero-label">LIVE PING</span>
+        <h2 id="heroPing">-- ms</h2>
+        </div>
+
+        <div class="hero-box">
+        <span class="hero-label">NETWORK SCORE</span>
+        <h2 id="heroScore">--</h2>
+        </div>
+
+    </div>
+        <!-- STATS -->
+        <div class="stats">
+          <p>📊 Avg Ping: <span id="avgPing">--</span></p>
+          <p>🔼 Max Ping: <span id="maxPing">--</span></p>
+          <p>🔽 Min Ping: <span id="minPing">--</span></p>
+          <p>🧠 Network Score: <span id="networkScore">--</span></p>
+        </div>
+
+        <!-- INFO -->
+        <div class="info">
+
+          <p>
+            🌐 <strong>IP Address:</strong>
+            <span id="ip">---</span>
+          </p>
+
+          <p>
+            📶 <strong>Status:</strong>
+            <span id="status">---</span>
+          </p>
+
+          <p>
+            ⚡ <strong>Ping:</strong>
+            <span id="ping">---</span>
+          </p>
+
+          <p>
+            📍 <strong>Location:</strong>
+            <span id="location">---</span>
+          </p>
+
+        </div>
+
+        <!-- BUTTONS -->
+        <div class="actions">
+
+          <button onclick="checkNetwork()">
+            Check Network
+          </button>
+
+          <button onclick="toggleTheme()">
+            Dark Mode 
+          </button>
+
+          <button onclick="toggleMonitoring()">
+            Start Monitoring 
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- GRAPH PANEL -->
+    <section class="graph-section">
+
+      <h3>Real-Time Ping Monitor</h3>
+
+      <!-- LEGEND -->
+      <div class="legend">
+
+        <div class="legend-item">
+          <span class="legend-dot stable-dot"></span>
+          <span>Stable</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-dot weak-dot"></span>
+          <span>Weak</span>
+        </div>
+
+        <div class="legend-item">
+          <span class="legend-dot critical-dot"></span>
+          <span>Critical</span>
+        </div>
+
+      </div>
+
+      <!-- CANVAS -->
+      <canvas id="pingChart"></canvas>
+
+    </section>
+
+  </main>
+
+  <script src="script.js" defer></script>
+
+</body>
+</html>
