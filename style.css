@@ -138,7 +138,6 @@ h1 {
   text-shadow:
     0 0 12px rgba(56,189,248,0.15);
 }
-
 /* CARD LIGHT EFFECT */
 .card::before {
 
@@ -208,7 +207,6 @@ button {
 
   transition: 0.25s;
 }
-
 button:hover {
 
   background: #334155;
@@ -312,7 +310,6 @@ button:active {
   margin-top: 8px;
   margin-bottom: 12px;
 }
-
 .legend-item {
 
   display: flex;
@@ -420,8 +417,14 @@ button:active {
   backdrop-filter: blur(10px);
 
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: translate(-6px);
+  
 }
-
 /* STABLE */
 .stable-banner {
 
@@ -498,6 +501,8 @@ button:active {
 
   animation:
     pulseAlert 2s infinite;
+    transform: translate(-6px);
+    align-self:center ;
 }
 
 /* GOOD */
@@ -579,4 +584,12 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 16px;
   padding: 10px;
+}
+.subtitle{
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: -18px;
+    margin-bottom: 25px;
+    letter-spacing: 0.5px;
+    opacity: 0.9;
 }
